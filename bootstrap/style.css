@@ -1,0 +1,94 @@
+/* FFU Brand Colors */
+:root {
+  --ffu-purple: #6e00ff;
+  --ffu-teal: #20c997;
+  --ffu-red: #ff6b6b;
+  --ffu-dark: #121212;
+}
+
+/* FFU Logo Styling */
+.ffu-logo-text {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #6e00ff, #0d6efd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.ffu-logo-sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
+  color: #aaa;
+  display: block;
+  margin-top: -5px;
+}
+
+.ffu-logo-hero {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 5rem;
+  background: linear-gradient(135deg, #6e00ff, #0d6efd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Category Badges */
+.bg-purple {
+  background-color: var(--ffu-purple);
+}
+
+.bg-teal {
+  background-color: var(--ffu-teal);
+}
+
+.bg-red {
+  background-color: var(--ffu-red);
+}
+
+.btn-outline-purple {
+  color: var(--ffu-purple);
+  border-color: var(--ffu-purple);
+}
+
+.btn-outline-purple:hover {
+  background-color: var(--ffu-purple);
+  color: white;
+}
+
+.btn-outline-teal {
+  color: var(--ffu-teal);
+  border-color: var(--ffu-teal);
+}
+
+.btn-outline-teal:hover {
+  background-color: var(--ffu-teal);
+  color: white;
+}
+
+.btn-outline-red {
+  color: var(--ffu-red);
+  border-color: var(--ffu-red);
+}
+
+.btn-outline-red:hover {
+  background-color: var(--ffu-red);
+  color: white;
+}
+
+/* Hero Section */
+.ffu-hero {
+  background: linear-gradient(135deg, #121212 0%, #6e00ff 100%);
+}
+
+/* Card Hover Effect */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
