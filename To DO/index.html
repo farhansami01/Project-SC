@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate To-Do Game</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rubik:wght@700&display=swap"
+        rel="stylesheet">
+    <!--Icon-->
+    <link rel="icon" href="./to do.png" type="image/png">
+    <!-- Link to External CSS File -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="d-flex align-items-center">
+    <!-- Hidden audio element for celebrations -->
+    <audio id="celebrationAudio" src="eternal-celebration-293494.mp3" loop></audio>
+    <!-- Music Visualizer -->
+    <div id="musicVisualizer" class="position-fixed start-0 top-0 h-100 d-flex align-items-center px-3"
+        style="z-index: 100;">
+        <div class="visualizer-bar-container d-flex align-items-end" style="height: 200px;">
+            <div class="visualizer-bar mx-1" style="width: 8px; background: #ff69b4;"></div>
+            <div class="visualizer-bar mx-1" style="width: 8px; background: #23d5ab;"></div>
+            <div class="visualizer-bar mx-1" style="width: 8px; background: #e73c7e;"></div>
+            <div class="visualizer-bar mx-1" style="width: 8px; background: #23a6d5;"></div>
+            <div class="visualizer-bar mx-1" style="width: 8px; background: #ee7752;"></div>
+        </div>
+    </div>
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="glass-card card border-0 p-4">
+                    <div class="card-body">
+                        <h1 class="text-center mb-3">Ultimate To-Do Game <img src="./to do.png" alt="To-Do Icon"
+                                class="img-fluid mb-3" style="width: 10%; height: auto;"></h1>
+
+                        <p class="text-center mb-4 lead">Complete tasks and level up your productivity!</p>
+
+                        <!-- Game Stats -->
+                        <div class="d-flex justify-content-around mb-4">
+                            <div class="badge bg-success p-3 rounded-pill">
+                                <i class="fas fa-star me-2"></i> Score: <span id="score">0</span>
+                            </div>
+                            <div class="badge bg-primary p-3 rounded-pill">
+                                <i class="fas fa-trophy me-2"></i> Level: <span id="level">1</span>
+                            </div>
+                        </div>
+
+                        <!-- Task Input -->
+                        <div class="input-group mb-4 shadow">
+                            <input type="text" id="taskInput" class="form-control form-control-lg"
+                                placeholder="What's your next task?">
+                            <button id="addTaskBtn" class="btn btn-danger btn-lg px-4">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+
+                        <!-- Task List -->
+                        <ul id="taskList" class="list-unstyled mb-4"></ul>
+
+                        <!-- Celebration -->
+                        <div id="celebration" class="alert alert-success text-center d-none bounce">
+                            🎉 Task Completed! +10 Points! 🎉
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="text-center mt-4">
+                            <p class="mb-2">Created with ❤️ by <strong class="text-warning">Farhan Sami</strong></p>
+                            <button id="inviteBtn" class="btn btn-outline-light">
+                                <i class="fas fa-share-alt me-2"></i> Challenge Friends!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Celebration Elements (hidden by default) -->
+    <div id="levelUpCelebration" class="position-fixed top-0 start-0 w-100 h-100 d-none"
+        style="pointer-events: none; z-index: 1000;">
+        <!-- Sparkles -->
+        <div class="position-absolute sparkle" style="top: 20%; left: 10%;"></div>
+        <div class="position-absolute sparkle" style="top: 30%; left: 70%;"></div>
+        <div class="position-absolute sparkle" style="top: 70%; left: 20%;"></div>
+        <div class="position-absolute sparkle" style="top: 80%; left: 80%;"></div>
+
+        <!-- Flowers -->
+        <div class="position-absolute flower" style="top: 10%; left: 30%;">
+            <i class="fas fa-spin fa-sparkle" style="color: #ff69b4;"></i>
+        </div>
+        <div class="position-absolute flower" style="top: 60%; left: 50%;">
+            <i class="fas fa-spin fa-sparkle" style="color: #ffd700;"></i>
+        </div>
+
+        <!-- Crackers -->
+        <div class="position-absolute cracker" style="top: 40%; left: 20%;">
+            <i class="fas fa-fire" style="color: #ff4500;"></i>
+        </div>
+        <div class="position-absolute cracker" style="top: 30%; left: 60%;">
+            <i class="fas fa-fire" style="color: #ff8c00;"></i>
+        </div>
+
+        <!-- Celebration Text -->
+        <div class="position-absolute top-50 start-50 translate-middle text-center">
+            <h2 class="display-3 fw-bold text-white text-shadow">LEVEL UP!</h2>
+            <p class="fs-4">You've reached level <span id="celebratedLevel">1</span>!</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Link to External JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
